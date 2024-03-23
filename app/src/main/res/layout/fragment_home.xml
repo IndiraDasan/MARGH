@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="May your evening be Filled with tranquility"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/subHeading"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/darkBlue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:text="Motivation"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toRightOf="@id/subHeading"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:src="@drawable/pngtreegoogle_search_bar_and_icon_7886132"/>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview"
+    android:layout_marginTop="5dp"
+    app:layout_constraintTop_toBottomOf="@id/subHeading"
+    tools:listitem="@layout/examblelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
